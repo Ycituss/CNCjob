@@ -23,18 +23,7 @@ while(str != null){
 	str = br.readLine();
 }
 br.close();
-/*
-String s = strB.toString();
-JSONArray json = new JSONArray(s);
 
-if(json != null){
-    for(int i=0; i<json.length(); i++){
-        JSONObject job = json.getJSONObject(i);
-        out.println(job.get("name"));
-        out.println(job.get("studentnumber"));
-    }
-    //out.println(json);
-}*/
 
  %>
  <h2>

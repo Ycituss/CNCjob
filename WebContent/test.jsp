@@ -12,6 +12,7 @@
 <title>自动刷新</title>
 </head>
 <body>
+<center>
 <h2>
 <%   // 设置每隔5秒自动刷新
    response.setIntHeader("Refresh", 5);
@@ -20,6 +21,7 @@
    String am_pm;
    int year = calendar.get(Calendar.YEAR);
    int month = calendar.get(Calendar.MONTH);
+   month++; //月份计数从0开始，加1获得正确月份
    int day = calendar.get(Calendar.DATE);
    int hour = calendar.get(Calendar.HOUR);
    int minute = calendar.get(Calendar.MINUTE);
@@ -43,7 +45,7 @@ if(!file.exists()){
 }
 String s = new String();
 
-if(json != null){
+if(json.length() > 1){
     for(int i=0; i<json.length(); i++){
     	JSONObject job = json.getJSONObject(i);
     	out.println(job.get("name"));
@@ -58,10 +60,11 @@ if(json != null){
     os.close();
 }
 else 
-	out.println("{\"result\": 0, \"errmsg\": \"无效的请求\"}"); 
+	out.println("没有接收到任何POST数据报"); 
 	
 
 %>
 </h2>
+</center>
 </body>
 </html>
