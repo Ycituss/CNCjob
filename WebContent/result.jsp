@@ -2,7 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     import="java.io.*"
     import="java.util.*"
-    import="myfirstwebproject.*"
     import="net.sf.json.*"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
