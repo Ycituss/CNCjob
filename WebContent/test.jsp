@@ -45,18 +45,21 @@ if(!file.exists()){
 }
 String s = new String();
 
-if(json.length() > 1){
+if(json.length() > 1){      //判断是否接收到数据
     for(int i=0; i<json.length(); i++){
     	JSONObject job = json.getJSONObject(i);
-    	out.println(job.get("name"));
-    	out.println(job.get("studentnumber"));
+    	out.println(job.get("name"));                  //获取键值为“name”的数据
+    	out.println(job.get("studentnumber"));         //获取键值为“studentnumber”的数据
     	s = s + "\n" + CT + " " + job.get("name") + job.get("studentnumber");
     }
     //out.println(json);
+    /*
+    将数据存入文件
+    */
     byte[] b = s.getBytes();
     int l = s.length();
     OutputStream os = new FileOutputStream(file,true);
-    os.write(b);
+    os.write(b);        
     os.close();
 }
 else 

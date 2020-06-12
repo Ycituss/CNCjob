@@ -12,6 +12,9 @@
 </head>
 <body>
 <%
+/*
+读取数据并存入strB中
+*/
 File file = new File("/home/tomcat/apache-tomcat-9.0.36/webapps/temp.txt");
 FileReader fr = new FileReader(file);
 BufferedReader br = new BufferedReader(fr);
