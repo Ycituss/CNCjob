@@ -49,9 +49,10 @@ try{
 	if(!json.isEmpty()){      //判断是否接收到数据
 	    for(int i=0; i<json.length(); i++){
 	        JSONObject job = json.getJSONObject(i);
-	        out.println(job.get("name"));                  //获取键值为“name”的数据
-	        out.println(job.get("studentnumber"));         //获取键值为“studentnumber”的数据
-	        s = s + "\n" + CT + " " + job.get("name") + job.get("studentnumber");
+	        out.println("接收到数据</br>");
+	        out.println("姓名:" + job.get("name"));                  //获取键值为“name”的数据
+	        out.println("  学号:" + job.get("studentnumber"));         //获取键值为“studentnumber”的数据
+	        s = s + "\n" + CT + " " + "姓名:" + job.get("name") + "  学号:" + job.get("studentnumber");
 	    }
 	    //out.println(json);
 	    /*
