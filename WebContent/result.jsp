@@ -1,5 +1,5 @@
 <%@page import="javax.xml.transform.Templates"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=gbk"
     import="java.io.*"
     import="java.util.*"
     import="net.sf.json.*"
@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>POST数据报发送结果</title>
 </head>
 <body>

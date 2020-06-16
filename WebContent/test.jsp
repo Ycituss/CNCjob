@@ -1,5 +1,5 @@
 <%@page import="javax.xml.transform.Templates"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=gbk"
     import="java.io.*"
     import="java.util.*"
     import="CNCjob.*"
@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>自动刷新</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
    out.println("当前时间: " + CT + "\n"); %>
 </h2>
 <h2>
-<% String postData = Common.getPostData(request.getInputStream(), request.getContentLength(), null);
+<% String postData = Common.getPostData(request.getInputStream(), request.getContentLength(), "gbk");
 //out.println(postData);
 //String post = postData.substring(0, postData.length()-1);
 JSONArray json = JSONArray.fromObject(postData);
